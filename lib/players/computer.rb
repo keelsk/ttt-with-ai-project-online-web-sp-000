@@ -5,8 +5,9 @@ module Players
       move = nil
       if !(board.taken?(5))
         move = "5"
-      elsif !(board.taken?(1))
-        move = "1"
+      elsif board.cells.uniq.length 
+        array = ["1", "3", "7", "9"]
+        move = array.sample
       elsif !(board.taken?(3)
         move = "3"
       elsif !(board.taken?(7))
