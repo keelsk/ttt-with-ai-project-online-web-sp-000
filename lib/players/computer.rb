@@ -5,11 +5,12 @@ module Players
       move = nil
       if !(board.taken?(5))
         move = "5"
-      else
+      elsif (board.turn_count < 3)
         corners = [1, 3, 7, 9]
-        
-        
-        array = ["1","2","3","4","6","7","8","9"]
+        move = corners.find { |x| !(board.taken?(x))}
+        move.to_s
+      else
+        array = rand(1..9)
         move = array.sample
       end
       move
