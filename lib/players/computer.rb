@@ -9,7 +9,10 @@ module Players
         array = ["2", "3", "4", "7"]
         move = array.sample
       elsif board.taken?(2)
-        array = ["3", "5", "8"]
+        array = ["1", "3", "5", "8"]
+        move = array.sample
+      elsif board.taken?(3)
+        array = ["1", "2", "5", "6", "8", "9"]
         move = array.sample
       end
     end
