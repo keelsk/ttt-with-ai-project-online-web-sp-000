@@ -9,7 +9,12 @@ module Players
         array = ["1", "3", "7", "9"]
         move = array.sample
       else
-        board.cells.find_index {|x, index|
+        array = [1, 2, 3, 4,5 6, 7, 8, 9]
+        array.find_index do |x, index| 
+          if !(board.taken?(index))
+            move = "#{index}"
+          end
+        end
       end
       move
     end
