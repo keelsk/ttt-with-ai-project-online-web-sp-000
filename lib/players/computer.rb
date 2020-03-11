@@ -5,9 +5,8 @@ module Players
       move = nil
       if !(board.taken?(5))
         move = "5"
-      elsif (board.taken?(1))
-        array = ["1", "3", "7", "9"]
-        move = array.sample
+      elsif !(board.taken?(1))
+        move = "1"
       else
         array = [1, 2, 3, 4,5, 6, 7, 8, 9]
         array.find_index do |x, index| 
