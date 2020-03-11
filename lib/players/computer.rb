@@ -9,13 +9,7 @@ module Players
         corners = [1, 3, 7, 9]
         position = corners.find { |x| !(board.taken?(x))}
         move = position.to_s
-      else
-        until (!(board.taken?(move)))
-          position = rand(1..9)
-        end
-        move = position.to_s
       end
-      move
     end
   end
 end
