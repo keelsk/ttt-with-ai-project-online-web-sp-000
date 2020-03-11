@@ -5,7 +5,7 @@ module Players
       move = nil
       if !(board.taken?(5))
         move = "5"
-      elsif board.turn_count <= 3
+      elsif (board.taken?(1))
         array = ["1", "3", "7", "9"]
         move = array.sample
       else
