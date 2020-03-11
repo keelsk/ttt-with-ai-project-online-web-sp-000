@@ -7,7 +7,7 @@ module Players
         move = "5"
       else
         array = ["1","2","3","4","6","7","8","9"]
-        move =  array.sample
+        move = array.sample
       end
       move
     end
