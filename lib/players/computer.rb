@@ -8,9 +8,8 @@ module Players
       elsif board.turn_count <= 3
         array = ["1", "3", "7", "9"]
         move = array.sample
-      elsif board.turn_count > 3
-        array = ["2", "4", "6", "8"]
-        move = array.sample
+      else
+        board.cells.find_index
       end
       move
     end
