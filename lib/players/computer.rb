@@ -6,7 +6,7 @@ module Players
       if !(board.taken?(5))
         move = "5"
       elsif board.taken?(1)
-        array = ["2", "3", "4", "7"]
+        array = ["2", "3", "4", "7", "5", "9"]
         move = array.sample
       elsif board.taken?(2)
         array = ["1", "3", "5", "8"]
