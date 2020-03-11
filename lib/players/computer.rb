@@ -5,9 +5,15 @@ module Players
       move = nil
       if !(board.taken?(5))
         move = "5"
-      elsif board.turn_count == 3
-        array = ["1", "2", "3", "4", "6", "7", "8", "9"]
+      elsif board.turn_count == 3 || board.turn_count == 5
+        array = ["1", "3", "7", "9"]
         move = array.sample
+        
+      else
+        array 
+        array.each do |index|
+          board.taken?(index)
+        end
       end
     end
   end
