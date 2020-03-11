@@ -7,11 +7,13 @@ module Players
         move = "5"
       elsif (board.turn_count < 3)
         corners = [1, 3, 7, 9]
-        move = corners.find { |x| !(board.taken?(x))}
-        move.to_s
+        position = corners.find { |x| !(board.taken?(x))}
+        move = position.to_s
       else
-        array = rand(1..9)
-        move = array.sample
+        until (!(board.taken?(move)))
+          position = rand(1..9)
+        end
+        move = position.to_s
       end
       move
     end
